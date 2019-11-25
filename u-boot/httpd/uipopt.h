@@ -307,7 +307,7 @@ typedef unsigned short uip_stats_t;
  *
  * \hideinitializer
  */
-#define UIP_CONNS       2
+#define UIP_CONNS       4
 
 /**
  * The maximum number of simultaneously listening TCP ports.
@@ -328,7 +328,7 @@ typedef unsigned short uip_stats_t;
  * \hideinitializer
  */
 //#define UIP_RECEIVE_WINDOW   32768
-#define UIP_RECEIVE_WINDOW   3000
+#define UIP_RECEIVE_WINDOW     4096
 
 /**
  * Determines if support for TCP urgent data notification should be
@@ -425,7 +425,7 @@ typedef unsigned short uip_stats_t;
  *
  * \hideinitializer
  */
-#define UIP_BUFSIZE     1500
+#define UIP_BUFSIZE     1022
 
 
 /**

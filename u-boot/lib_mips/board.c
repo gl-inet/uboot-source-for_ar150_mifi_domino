@@ -99,10 +99,16 @@ static int init_baudrate(void){
 #ifndef COMPRESSED_UBOOT
 static int init_func_ram(void){
 	puts("DRAM:   ");
-
+    unsigned int reg = 0;
 	if((gd->ram_size = initdram()) > 0){
 		print_size(gd->ram_size, print_mem_type());
 		puts("\n");
+        reg=    ar7240_reg_rd(0x18000000);
+        printf("DDR CONFIG:  %X\n",reg);
+        reg=    ar7240_reg_rd(0x18000004);
+        printf("DDR CONFIG2: %X\n",reg);
+        reg=    ar7240_reg_rd(0x18000014);
+        printf("DDR REFSH: %X\n",reg);
 		return(0);
 	}
 

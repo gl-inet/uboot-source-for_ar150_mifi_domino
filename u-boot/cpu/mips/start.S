@@ -376,7 +376,7 @@ rel_start:
 #ifdef CONFIG_WASP_SUPPORT
 	li	t0, 0xbd007000	/* Setup stack in SRAM */
 #else
-	li	t0, CFG_SDRAM_BASE + CFG_INIT_SP_OFFSET
+    li      t0, 0xbd007000  /* Setup stack in SRAM */
 #endif
 	la	sp, 0(t0)
 

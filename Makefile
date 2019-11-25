@@ -1,8 +1,8 @@
 export BUILD_TOPDIR=$(PWD)
 export STAGING_DIR=$(BUILD_TOPDIR)/tmp
 
-export TOOLPATH=/data3/openwrt-cc-working/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/
-export PATH:=$(TOOLPATH)/bin:${PATH}
+export TOOLPATH=$(BUILD_TOPDIR)/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/
+export PATH:=$(TOOLPATH)/bin:$(PATH)
 export MAKECMD=make --silent ARCH=mips CROSS_COMPILE=mips-openwrt-linux-uclibc-
 
 #export MAKECMD=make --silent ARCH=mips CROSS_COMPILE=mips-openwrt-linux-gnu-
